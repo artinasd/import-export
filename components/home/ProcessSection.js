@@ -1,4 +1,4 @@
-import { ArrowLeft, BadgeCheck, Box, ClipboardList, SearchCheck, Truck } from "lucide-react";
+import { BadgeCheck, Box, ClipboardList, SearchCheck, Truck } from "lucide-react";
 
 const steps = [
   ["۰۱", "نیاز شما", "دریافت مشخصات کالا، حجم، مقصد و نیازهای اصلی شما.", ClipboardList],
@@ -13,7 +13,7 @@ export default function ProcessSection() {
     <section id="process" className="bg-[#ebeae4] py-24 lg:py-36">
       <div className="container-site">
         <div className="mb-14 grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-end">
-          <div><p className="mb-5 inline-flex rounded-xl border border-[#98783f]/20 bg-[#98783f]/[0.07] px-3.5 py-2 text-base font-bold text-[#98783f]">فرایند همکاری</p><h2 className="font-display text-balance text-4xl font-black leading-[1.2] sm:text-5xl lg:text-6xl">از نیاز شما<br />تا <span className="text-[#98783f]">تحویل کالا.</span></h2></div>
+          <div><p className="mb-5 inline-flex rounded-lg border border-[#98783f]/15 bg-[#98783f]/[0.08] px-4 py-2 text-base font-bold text-[#98783f]">فرایند همکاری</p><h2 className="font-display text-balance text-4xl font-black leading-[1.2] sm:text-5xl lg:text-6xl">از نیاز شما<br />تا <span className="text-[#98783f]">تحویل کالا.</span></h2></div>
           <p className="max-w-lg text-sm leading-8 text-[#686963]">در هر مرحله می‌دانید چه اتفاقی در حال انجام است؛ یک مسیر شفاف از تعریف نیاز تا رسیدن کالا به مقصد.</p>
         </div>
         <div className="grid border-y border-black/10 md:grid-cols-5">
