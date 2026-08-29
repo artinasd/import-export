@@ -38,7 +38,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <a href="#contact" className={`hidden items-center gap-2 rounded-full px-5 py-3 text-sm font-bold transition lg:flex ${scrolled ? "bg-[#171816] text-white hover:bg-[#98783f]" : "bg-white text-black hover:bg-[#c9a66b]"}`}>
+          <a href="#contact" className={`hidden items-center gap-2 rounded-full px-5 py-3 text-sm font-bold transition ${scrolled ? "bg-[#c9a66b] text-[#171816] hover:bg-[#b9955b]" : "bg-white text-black hover:bg-[#c9a66b]"} lg:flex`}>
             شروع گفتگو <ArrowLeft size={15} />
           </a>
 
