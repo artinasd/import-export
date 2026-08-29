@@ -12,7 +12,21 @@ export default function ServicesPreview() {
     <section id="services" className="bg-[#f3f2ed] py-24 lg:py-32">
       <div className="container-site">
         <div className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div><p className="mb-5 inline-flex w-fit items-center rounded-md border border-[#98783f]/25 bg-[#98783f]/10 px-3 py-1 text-base font-extrabold leading-6 text-[#6f5428]">خدمات کلیدی</p><h2 className="font-display max-w-3xl text-balance text-4xl font-black leading-[1.18] tracking-tight sm:text-5xl lg:text-7xl">تأمین کالا، <span className="text-[#98783f]">فراتر از خرید.</span></h2></div>
+          <div>
+            <p
+              className="mb-5 inline-flex w-fit items-center text-base font-extrabold leading-6"
+              style={{
+                backgroundColor: "#e7dcc4",
+                border: "1px solid rgba(152, 120, 63, 0.3)",
+                borderRadius: "8px",
+                color: "#5f4923",
+                padding: "4px 12px",
+              }}
+            >
+              خدمات کلیدی
+            </p>
+            <h2 className="font-display max-w-3xl text-balance text-4xl font-black leading-[1.18] tracking-tight sm:text-5xl lg:text-7xl">تأمین کالا، <span className="text-[#98783f]">فراتر از خرید.</span></h2>
+          </div>
           <p className="max-w-md text-sm leading-8 text-[#686963]">از یافتن تأمین‌کننده تا کنترل کالا، حمل و ترخیص؛ کل مسیر تأمین را یکپارچه مدیریت می‌کنیم.</p>
         </div>
         <div className="grid border-t border-black/10 md:grid-cols-2">
