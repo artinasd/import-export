@@ -12,7 +12,7 @@ export default function ServicesPreview() {
     <section id="services" className="bg-[#f3f2ed] py-24 lg:py-32">
       <div className="container-site">
         <div className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div><p className="mb-5 inline-flex rounded-xl border border-[#98783f]/20 bg-[#98783f]/[0.10] px-5 py-2.5 text-lg font-extrabold leading-none text-[#98783f]">خدمات کلیدی</p><h2 className="font-display max-w-3xl text-balance text-4xl font-black leading-[1.18] tracking-tight sm:text-5xl lg:text-7xl">تأمین کالا، <span className="text-[#98783f]">فراتر از خرید.</span></h2></div>
+          <div><p className="mb-6 inline-block rounded-[14px] border border-[#98783f]/30 bg-[#d9c49b] px-5 py-3 text-lg font-extrabold leading-none text-[#5f4923] shadow-sm">خدمات کلیدی</p><h2 className="font-display max-w-3xl text-balance text-4xl font-black leading-[1.18] tracking-tight sm:text-5xl lg:text-7xl">تأمین کالا، <span className="text-[#98783f]">فراتر از خرید.</span></h2></div>
           <p className="max-w-md text-sm leading-8 text-[#686963]">از یافتن تأمین‌کننده تا کنترل کالا، حمل و ترخیص؛ کل مسیر تأمین را یکپارچه مدیریت می‌کنیم.</p>
         </div>
         <div className="grid border-t border-black/10 md:grid-cols-2">
