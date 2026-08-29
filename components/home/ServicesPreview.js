@@ -13,18 +13,7 @@ export default function ServicesPreview() {
       <div className="container-site">
         <div className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p
-              className="mb-5 inline-flex w-fit items-center text-base font-extrabold leading-6"
-              style={{
-                backgroundColor: "#e7dcc4",
-                border: "1px solid rgba(152, 120, 63, 0.3)",
-                borderRadius: "8px",
-                color: "#5f4923",
-                padding: "4px 12px",
-              }}
-            >
-              خدمات کلیدی
-            </p>
+            <p className="mb-5 inline-flex w-fit items-center text-base font-extrabold leading-6" style={{ backgroundColor: "#e7dcc4", border: "1px solid rgba(152, 120, 63, 0.3)", borderRadius: "8px", color: "#5f4923", padding: "4px 12px" }}>خدمات کلیدی</p>
             <h2 className="font-display max-w-3xl text-balance text-4xl font-black leading-[1.18] tracking-tight sm:text-5xl lg:text-7xl">تأمین کالا، <span className="text-[#98783f]">فراتر از خرید.</span></h2>
           </div>
           <p className="max-w-md text-sm leading-8 text-[#686963]">از یافتن تأمین‌کننده تا کنترل کالا، حمل و ترخیص؛ کل مسیر تأمین را یکپارچه مدیریت می‌کنیم.</p>
@@ -34,7 +23,7 @@ export default function ServicesPreview() {
             <article key={number} className={`group border-b border-black/10 p-7 transition-colors hover:bg-[#ebeae4] sm:p-9 lg:p-11 ${index % 2 === 0 ? "md:border-l" : ""}`}>
               <div className="mb-14 flex items-start justify-between"><span className="text-xs text-black/35">{number}</span><span className="flex h-12 w-12 items-center justify-center rounded-full border border-black/10 transition duration-500 group-hover:-translate-x-1 group-hover:bg-[#171816] group-hover:text-white"><Icon size={18} strokeWidth={1.5} /></span></div>
               <h3 className="mb-4 text-2xl font-black">{title}</h3><p className="max-w-md text-sm leading-8 text-[#686963]">{text}</p>
-              <a href="#contact" className="mt-8 inline-flex items-center gap-2 text-xs font-bold opacity-60 transition group-hover:opacity-100">مشاهده خدمات<ArrowUpLeft size={14} /></a>
+              <a href={title === "اعتبارسنجی تأمین‌کننده" ? "/supplier-verification" : "/services"} className="mt-8 inline-flex items-center gap-2 text-xs font-bold opacity-60 transition group-hover:opacity-100">مشاهده خدمات<ArrowUpLeft size={14} /></a>
             </article>
           ))}
         </div>
