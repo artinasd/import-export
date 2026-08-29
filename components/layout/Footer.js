@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <p className="mb-6 text-sm text-white/40">برای شروع یک همکاری</p>
             <h2 className="font-display max-w-2xl text-balance text-4xl font-black leading-[1.2] sm:text-6xl">یک نیاز تجاری دارید؟<br /><span className="text-[#c9a66b]">با ما صحبت کنید.</span></h2>
-            <a href="mailto:hello@example.com" className="mt-9 inline-flex items-center gap-3 rounded-full bg-white px-6 py-4 text-sm font-bold text-black transition hover:bg-[#c9a66b]">تماس با ما <ArrowUpLeft size={15} /></a>
+            <a href="mailto:hello@example.com" className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#c9a66b] px-6 py-4 text-sm font-bold text-[#171816] transition hover:bg-white">تماس با ما <ArrowUpLeft size={15} /></a>
           </div>
           <div className="grid content-end gap-5 text-sm text-white/55">
             <div className="flex items-center gap-3"><Phone size={16} /> +98 21 0000 0000</div>
