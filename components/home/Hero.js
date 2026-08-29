@@ -1,18 +1,17 @@
-import { ArrowLeft, ArrowDownLeft, Globe2, MapPin, PackageCheck, Ship } from "lucide-react";
+import { ArrowLeft, ArrowDownLeft, Globe2 } from "lucide-react";
 
 export default function Hero() {
   return (
     <section id="top" className="relative min-h-[760px] overflow-hidden bg-[#171816] text-white lg:min-h-[860px]">
-      <div className="absolute inset-0" aria-hidden="true">
-        <div className="absolute -left-32 top-10 h-[680px] w-[680px] rounded-full border border-white/[0.07]" />
-        <div className="absolute -left-8 top-28 h-[520px] w-[520px] rounded-full border border-white/[0.07]" />
-        <div className="absolute left-20 top-48 h-[320px] w-[320px] rounded-full border border-[#c9a66b]/20" />
-        <div className="absolute bottom-[-30%] right-[-8%] h-[600px] w-[600px] rounded-full bg-[#c9a66b]/[0.035] blur-3xl" />
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="absolute right-[-8%] top-1/2 h-[620px] w-[620px] -translate-y-1/2 rounded-full border border-white/[0.045]" />
+        <div className="absolute right-[4%] top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full border border-[#c9a66b]/[0.08]" />
+        <div className="absolute bottom-[-25%] left-[-8%] h-[600px] w-[600px] rounded-full bg-[#c9a66b]/[0.035] blur-3xl" />
         <div className="absolute inset-y-0 right-[8%] hidden w-px bg-white/[0.05] lg:block" />
       </div>
 
       <div className="container-site relative flex min-h-[760px] flex-col justify-center pt-28 lg:min-h-[860px]">
-        <div className="grid items-center gap-14 lg:grid-cols-[1fr_300px] lg:gap-20">
+        <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-24">
           <div className="max-w-5xl">
             <div className="reveal-up mb-8 flex items-center gap-3 text-sm text-white/50" style={{ animationDelay: "80ms" }}>
               <span className="h-px w-12 bg-[#c9a66b]" />
@@ -35,16 +34,28 @@ export default function Hero() {
           </div>
 
           <div className="reveal-up hidden lg:block" style={{ animationDelay: "340ms" }}>
-            <div className="border-y border-white/10 py-7">
-              <div className="mb-8 flex items-center justify-between text-xs text-white/35"><span>شبکه تجارت</span><Globe2 size={16} /></div>
-              <div className="space-y-5 text-sm">
-                <div className="flex items-center gap-4 text-white/80"><span className="h-1.5 w-1.5 rounded-full bg-white/50" /><span>ایران</span><span className="h-px flex-1 bg-white/10" /></div>
-                <div className="flex items-center gap-4 text-[#c9a66b]"><span className="h-2 w-2 rounded-full bg-[#c9a66b] shadow-[0_0_0_5px_rgba(201,166,107,.08)]" /><span>اروپا</span><span className="h-px flex-1 bg-[#c9a66b]/30" /></div>
-                <div className="flex items-center gap-4 text-white/80"><span className="h-1.5 w-1.5 rounded-full bg-white/50" /><span>بازار جهانی</span><span className="h-px flex-1 bg-white/10" /></div>
+            <div className="relative aspect-square overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.025] p-7 shadow-2xl shadow-black/20">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(201,166,107,.11),transparent_32%)]" />
+              <div className="relative flex h-full flex-col justify-between">
+                <div className="flex items-center justify-between">
+                  <div><p className="text-xs font-bold text-white/70">مسیر تجارت</p><p className="mt-1 text-[10px] text-white/30">از مبدأ تا بازار</p></div>
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#c9a66b]"><Globe2 size={16} /></span>
+                </div>
+                <div className="relative mx-auto h-[220px] w-full max-w-[290px]">
+                  <svg viewBox="0 0 290 220" className="absolute inset-0 h-full w-full" fill="none" aria-hidden="true">
+                    <path d="M42 158 C94 104 126 116 151 84 C177 52 206 68 248 34" stroke="rgba(255,255,255,.13)" strokeWidth="1.5" strokeDasharray="4 7" />
+                    <path d="M42 158 C94 104 126 116 151 84 C177 52 206 68 248 34" stroke="#c9a66b" strokeWidth="1.5" strokeDasharray="1 28" strokeLinecap="round" />
+                  </svg>
+                  <div className="absolute bottom-[50px] left-[31px] flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full border border-white/40 bg-[#171816]" /><span className="text-[10px] text-white/55">ایران</span></div>
+                  <div className="absolute left-1/2 top-[70px] -translate-x-1/2 flex items-center gap-2"><span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#c9a66b] text-[#171816] shadow-[0_0_0_8px_rgba(201,166,107,.08)]"><Globe2 size={14} /></span><span className="text-[10px] font-bold text-[#c9a66b]">اروپا</span></div>
+                  <div className="absolute right-[17px] top-[19px] flex items-center gap-2"><span className="text-[10px] text-white/55">بازار جهانی</span><span className="h-2.5 w-2.5 rounded-full border border-white/40 bg-[#171816]" /></div>
+                </div>
+                <div className="flex items-end justify-between border-t border-white/10 pt-5"><div><p className="text-[10px] text-white/30">تمرکز اصلی</p><p className="mt-1 text-xs font-bold text-white/70">منبع‌یابی اروپا</p></div><span className="text-[10px] text-[#c9a66b]">EUROPE ↗</span></div>
               </div>
             </div>
           </div>
         </div>
+        <div className="absolute bottom-8 left-0 right-0 flex items-center justify-end border-t border-white/10 pt-5 text-xs text-white/35"><span className="flex items-center gap-2"><ArrowDownLeft size={14} /> کشف مسیر</span></div>
       </div>
     </section>
   );
