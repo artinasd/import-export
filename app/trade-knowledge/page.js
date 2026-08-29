@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageHeader from "@/components/site/PageHeader";
 import TradeKnowledgeBrowser from "@/components/trade/TradeKnowledgeBrowser";
+import HSCodeFinder from "@/components/trade/HSCodeFinder";
 
 const resources = [
   ["سامانه جامع تجارت", "درگاه خدمات و فرایندهای تجارت خارجی", "https://www.ntsw.ir"],
@@ -18,6 +19,7 @@ export default function TradeKnowledgePage() {
       <Header />
       <PageHeader eyebrow="دانش تجارت" title="دانش تجارت، برای تصمیم بهتر." description="مطالب کاربردی درباره واردات، صادرات، گمرک، HS Code، تأمین و حمل‌ونقل؛ همراه با دسترسی سریع به منابع رسمی." />
       <TradeKnowledgeBrowser />
+      <HSCodeFinder />
       <section className="bg-[#e4e2da] py-20 lg:py-28">
         <div className="container-site">
           <div className="mb-12 max-w-2xl"><p className="mb-5 inline-flex w-fit items-center" style={{ backgroundColor: "#e7dcc4", border: "1px solid rgba(152,120,63,0.25)", borderRadius: "8px", color: "#6f5428", padding: "4px 12px", fontSize: "16px", fontWeight: 800, lineHeight: "24px" }}>منابع رسمی</p><h2 className="font-display text-3xl font-black sm:text-5xl">چند مرجع کاربردی، در یک نقطه.</h2></div>
