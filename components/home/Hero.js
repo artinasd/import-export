@@ -45,8 +45,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-
-        <div className="absolute bottom-8 left-0 right-0 flex items-center justify-between border-t border-white/10 pt-5 text-xs text-white/35"><span>۰۱ / ۰۴</span><span className="flex items-center gap-2"><ArrowDownLeft size={14} /> کشف مسیر</span></div>
       </div>
     </section>
   );
