@@ -1,33 +1,28 @@
-import { ArrowLeft, Check, MapPin, Ship, Sparkles } from "lucide-react";
+import { ArrowLeft, BadgeCheck, Box, ClipboardList, SearchCheck, Truck } from "lucide-react";
 
 const steps = [
-  ["۰۱", "نیاز شما", "مشخصات کالا، حجم و مقصد را دریافت می‌کنیم.", Sparkles],
-  ["۰۲", "منبع‌یابی", "بازار و تأمین‌کننده مناسب را در شبکه بین‌المللی بررسی می‌کنیم.", MapPin],
-  ["۰۳", "تجارت و گمرک", "مذاکره، اسناد، حمل و فرآیندهای گمرکی مدیریت می‌شوند.", Ship],
-  ["۰۴", "تحویل", "مسیر تا رسیدن کالا به مقصد با شما همراه می‌مانیم.", Check],
+  ["۰۱", "نیاز شما", "دریافت مشخصات کالا، حجم، مقصد و نیازهای اصلی شما.", ClipboardList],
+  ["۰۲", "بررسی", "تحلیل نیاز و شرایط تأمین و طراحی مسیر مناسب خرید.", SearchCheck],
+  ["۰۳", "تأمین", "یافتن و بررسی تأمین‌کنندگان متناسب با نیاز شما.", Box],
+  ["۰۴", "کنترل", "اعتبارسنجی و بازرسی کالا در صورت نیاز، پیش از ارسال.", BadgeCheck],
+  ["۰۵", "تحویل", "حمل، ترخیص و تحویل نهایی کالا تا مقصد.", Truck],
 ];
 
 export default function ProcessSection() {
   return (
-    <section id="process" className="relative overflow-hidden bg-[#ebeae4] py-24 lg:py-36">
-      <div className="absolute left-0 top-0 h-full w-px bg-black/5" aria-hidden="true" />
+    <section id="process" className="bg-[#ebeae4] py-24 lg:py-36">
       <div className="container-site">
-        <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
-          <div className="lg:sticky lg:top-32 lg:self-start">
-            <p className="mb-5 text-sm font-bold text-[#98783f]">مسیر همکاری</p>
-            <h2 className="font-display text-balance text-4xl font-black leading-[1.2] sm:text-5xl">تجارت پیچیده،<br />با یک مسیر <span className="text-[#98783f]">ساده.</span></h2>
-            <p className="mt-7 max-w-sm text-sm leading-8 text-[#686963]">شما مقصد را مشخص کنید؛ ما مسیر رسیدن را پیدا می‌کنیم. شفاف، مرحله‌به‌مرحله و بدون اضافه‌گویی.</p>
-          </div>
-          <div className="border-t border-black/10">
-            {steps.map(([number, title, text, Icon], index) => (
-              <div key={number} className="group grid grid-cols-[45px_1fr_auto] items-start gap-4 border-b border-black/10 py-8 sm:grid-cols-[65px_1fr_auto] sm:gap-7 sm:py-10">
-                <span className="pt-1 text-xs text-black/35">{number}</span>
-                <div><h3 className="flex items-center gap-3 text-xl font-black sm:text-2xl">{title}<Icon size={17} strokeWidth={1.5} className="text-[#98783f]" /></h3><p className="mt-3 max-w-lg text-sm leading-7 text-[#686963]">{text}</p></div>
-                <ArrowLeft size={17} className="mt-2 opacity-20 transition duration-300 group-hover:-translate-x-1 group-hover:opacity-70" />
-                {index < steps.length - 1 && <span className="absolute" />}
-              </div>
-            ))}
-          </div>
+        <div className="mb-14 grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-end">
+          <div><p className="mb-4 text-sm font-bold text-[#98783f]">فرایند همکاری</p><h2 className="font-display text-balance text-4xl font-black leading-[1.2] sm:text-5xl lg:text-6xl">از نیاز شما<br />تا <span className="text-[#98783f]">تحویل کالا.</span></h2></div>
+          <p className="max-w-lg text-sm leading-8 text-[#686963]">در هر مرحله می‌دانید چه اتفاقی در حال انجام است؛ یک مسیر شفاف از تعریف نیاز تا رسیدن کالا به مقصد.</p>
+        </div>
+        <div className="grid border-y border-black/10 md:grid-cols-5">
+          {steps.map(([number, title, text, Icon], index) => (
+            <article key={number} className={`group min-h-[250px] border-b border-black/10 p-6 sm:p-7 md:border-b-0 ${index !== 4 ? "md:border-l" : ""}`}>
+              <div className="flex items-center justify-between"><span className="text-xs text-black/35">{number}</span><Icon size={18} strokeWidth={1.5} className="text-[#98783f] transition duration-300 group-hover:scale-110" /></div>
+              <div className="mt-16"><h3 className="text-lg font-black">{title}</h3><p className="mt-3 text-xs leading-7 text-[#686963]">{text}</p></div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
