@@ -3,7 +3,6 @@ import Footer from "@/components/layout/Footer";
 import Hero from "@/components/home/Hero";
 import ServicesPreview from "@/components/home/ServicesPreview";
 import ProcessSection from "@/components/home/ProcessSection";
-import TradeDesk from "@/components/home/TradeDesk";
 import InquiryCTA from "@/components/home/InquiryCTA";
 import InsightsPreview from "@/components/home/InsightsPreview";
 import WhyUs from "@/components/home/WhyUs";
@@ -19,7 +18,6 @@ export default function HomePage() {
       <ServicesPreview />
       <WhyUs />
       <ProcessSection />
-      <TradeDesk />
       <InsightsPreview />
       <InquiryCTA />
       <Footer />
