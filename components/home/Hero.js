@@ -1,18 +1,23 @@
-import { ArrowLeft, ArrowDownLeft, Globe2 } from "lucide-react";
+import { ArrowLeft, ArrowDownLeft, Globe2, MapPin, PackageCheck, Ship } from "lucide-react";
+
+const routes = [
+  { label: "ایران", sublabel: "مبدأ", icon: MapPin },
+  { label: "اروپا", sublabel: "تأمین", icon: PackageCheck, active: true },
+  { label: "بازار جهانی", sublabel: "مقصد", icon: Ship },
+];
 
 export default function Hero() {
   return (
     <section id="top" className="relative min-h-[760px] overflow-hidden bg-[#171816] text-white lg:min-h-[860px]">
-      <div className="absolute inset-0" aria-hidden="true">
-        <div className="absolute -left-32 top-10 h-[680px] w-[680px] rounded-full border border-white/[0.07]" />
-        <div className="absolute -left-8 top-28 h-[520px] w-[520px] rounded-full border border-white/[0.07]" />
-        <div className="absolute left-20 top-48 h-[320px] w-[320px] rounded-full border border-[#c9a66b]/20" />
-        <div className="absolute bottom-[-30%] right-[-8%] h-[600px] w-[600px] rounded-full bg-[#c9a66b]/[0.035] blur-3xl" />
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="absolute right-[-12%] top-1/2 h-[680px] w-[680px] -translate-y-1/2 rounded-full border border-white/[0.055]" />
+        <div className="absolute right-[-5%] top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full border border-white/[0.035]" />
+        <div className="absolute bottom-[-25%] left-[-8%] h-[520px] w-[520px] rounded-full bg-[#c9a66b]/[0.035] blur-3xl" />
         <div className="absolute inset-y-0 right-[8%] hidden w-px bg-white/[0.05] lg:block" />
       </div>
 
       <div className="container-site relative flex min-h-[760px] flex-col justify-center pt-28 lg:min-h-[860px]">
-        <div className="grid items-center gap-14 lg:grid-cols-[1fr_300px] lg:gap-20">
+        <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-24">
           <div className="max-w-5xl">
             <div className="reveal-up mb-8 flex items-center gap-3 text-sm text-white/50" style={{ animationDelay: "80ms" }}>
               <span className="h-px w-12 bg-[#c9a66b]" />
@@ -35,14 +40,31 @@ export default function Hero() {
           </div>
 
           <div className="reveal-up hidden lg:block" style={{ animationDelay: "340ms" }}>
-            <div className="border-y border-white/10 py-7">
-              <div className="mb-8 flex items-center justify-between text-xs text-white/35"><span>شبکه تجارت</span><Globe2 size={16} /></div>
-              <div className="space-y-5 text-sm">
-                <div className="flex items-center gap-4 text-white/80"><span className="h-1.5 w-1.5 rounded-full bg-white/50" /><span>ایران</span><span className="h-px flex-1 bg-white/10" /></div>
-                <div className="flex items-center gap-4 text-[#c9a66b]"><span className="h-2 w-2 rounded-full bg-[#c9a66b] shadow-[0_0_0_5px_rgba(201,166,107,.08)]" /><span>اروپا</span><span className="h-px flex-1 bg-[#c9a66b]/30" /></div>
-                <div className="flex items-center gap-4 text-white/80"><span className="h-1.5 w-1.5 rounded-full bg-white/50" /><span>بازار جهانی</span><span className="h-px flex-1 bg-white/10" /></div>
+            <div className="relative overflow-hidden border-y border-white/10 py-8">
+              <div className="mb-9 flex items-center justify-between">
+                <div>
+                  <p className="text-xs font-bold text-white/70">شبکه تأمین</p>
+                  <p className="mt-1 text-[10px] text-white/30">مسیر یکپارچه تجارت شما</p>
+                </div>
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#c9a66b]"><Globe2 size={16} /></span>
+              </div>
+
+              <div className="relative">
+                <div className="absolute right-[15px] top-5 bottom-5 w-px bg-gradient-to-b from-white/10 via-[#c9a66b]/50 to-white/10" aria-hidden="true" />
+                <div className="space-y-2">
+                  {routes.map(({ label, sublabel, icon: Icon, active }) => (
+                    <div key={label} className={`group relative flex items-center gap-4 rounded-2xl px-3 py-4 transition ${active ? "bg-white/[0.055]" : ""}`}>
+                      <span className={`relative z-10 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border ${active ? "border-[#c9a66b] bg-[#c9a66b] text-[#171816]" : "border-white/15 bg-[#171816] text-white/35"}`}><Icon size={11} /></span>
+                      <div className="flex min-w-0 flex-1 items-center justify-between gap-4">
+                        <div><p className={`text-sm font-bold ${active ? "text-white" : "text-white/65"}`}>{label}</p><p className={`mt-1 text-[10px] ${active ? "text-[#c9a66b]" : "text-white/25"}`}>{sublabel}</p></div>
+                        {active && <span className="text-[9px] font-bold text-[#c9a66b]">ACTIVE</span>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
+            <p className="mt-5 max-w-[300px] text-xs leading-6 text-white/30">از شناسایی تأمین‌کننده تا تحویل؛ هر مرحله در یک مسیر روشن و قابل پیگیری.</p>
           </div>
         </div>
       </div>
