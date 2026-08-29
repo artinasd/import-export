@@ -26,37 +26,27 @@ export default function Hero() {
               و جهان.
             </h1>
             <div className="reveal-up mt-10 flex flex-col gap-7 sm:flex-row sm:items-center" style={{ animationDelay: "240ms" }}>
-              <a href="#inquiry" className="group inline-flex w-fit items-center gap-4 rounded-full bg-white px-5 py-3.5 text-sm font-bold text-black transition hover:bg-[#c9a66b]">
+              <a href="#inquiry" className="group inline-flex w-fit items-center gap-4 rounded-full bg-[#c9a66b] px-5 py-3.5 text-sm font-bold text-[#171816] transition hover:bg-white">
                 استعلام تأمین کالا
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition group-hover:bg-white group-hover:text-black">
-                  <ArrowLeft size={15} />
-                </span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#171816] text-white transition group-hover:bg-[#c9a66b] group-hover:text-[#171816]"><ArrowLeft size={15} /></span>
               </a>
-              <p className="max-w-md text-sm leading-8 text-white/45">
-                تأمین مواد اولیه و ماشین‌آلات، منبع‌یابی اروپا، واردات، صادرات و امور گمرکی؛ یک مسیر یکپارچه برای تجارت شما.
-              </p>
+              <p className="max-w-md text-sm leading-8 text-white/45">تأمین مواد اولیه و ماشین‌آلات، منبع‌یابی اروپا، واردات، صادرات و امور گمرکی؛ یک مسیر یکپارچه برای تجارت شما.</p>
             </div>
           </div>
 
           <div className="reveal-up hidden lg:block" style={{ animationDelay: "340ms" }}>
             <div className="border-y border-white/10 py-7">
-              <div className="mb-8 flex items-center justify-between text-xs text-white/35">
-                <span>شبکه تجارت</span>
-                <Globe2 size={16} />
-              </div>
+              <div className="mb-8 flex items-center justify-between text-xs text-white/35"><span>شبکه تجارت</span><Globe2 size={16} /></div>
               <div className="space-y-5 text-sm">
-                <div className="flex items-center justify-between text-white/80"><span>ایران</span><span className="h-px w-16 bg-white/15" /></div>
-                <div className="flex items-center justify-between text-[#c9a66b]"><span>اروپا</span><span className="h-px w-24 bg-[#c9a66b]/50" /></div>
-                <div className="flex items-center justify-between text-white/80"><span>بازار جهانی</span><span className="h-px w-10 bg-white/15" /></div>
+                <div className="flex items-center gap-4 text-white/80"><span className="h-1.5 w-1.5 rounded-full bg-white/50" /><span>ایران</span><span className="h-px flex-1 bg-white/10" /></div>
+                <div className="flex items-center gap-4 text-[#c9a66b]"><span className="h-2 w-2 rounded-full bg-[#c9a66b] shadow-[0_0_0_5px_rgba(201,166,107,.08)]" /><span>اروپا</span><span className="h-px flex-1 bg-[#c9a66b]/30" /></div>
+                <div className="flex items-center gap-4 text-white/80"><span className="h-1.5 w-1.5 rounded-full bg-white/50" /><span>بازار جهانی</span><span className="h-px flex-1 bg-white/10" /></div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-0 right-0 flex items-center justify-between border-t border-white/10 pt-5 text-xs text-white/35">
-          <span>۰۱ / ۰۴</span>
-          <span className="flex items-center gap-2"><ArrowDownLeft size={14} /> کشف مسیر</span>
-        </div>
+        <div className="absolute bottom-8 left-0 right-0 flex items-center justify-between border-t border-white/10 pt-5 text-xs text-white/35"><span>۰۱ / ۰۴</span><span className="flex items-center gap-2"><ArrowDownLeft size={14} /> کشف مسیر</span></div>
       </div>
     </section>
   );
