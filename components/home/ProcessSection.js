@@ -13,7 +13,7 @@ export default function ProcessSection() {
     <section id="process" className="bg-[#ebeae4] py-24 lg:py-36">
       <div className="container-site">
         <div className="mb-14 grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-end">
-          <div><p className="mb-6 inline-flex rounded-xl border border-[#98783f]/20 bg-[#98783f]/[0.10] px-5 py-2.5 text-lg font-extrabold leading-none text-[#98783f]">فرایند همکاری</p><h2 className="font-display text-balance text-4xl font-black leading-[1.2] sm:text-5xl lg:text-6xl">از نیاز شما<br />تا <span className="text-[#98783f]">تحویل کالا.</span></h2></div>
+          <div><p className="mb-5 inline-flex w-fit items-center text-base font-extrabold leading-6" style={{ backgroundColor: "#e7dcc4", border: "1px solid rgba(152, 120, 63, 0.25)", borderRadius: "8px", color: "#6f5428", padding: "4px 12px" }}>فرایند همکاری</p><h2 className="font-display text-balance text-4xl font-black leading-[1.2] sm:text-5xl lg:text-6xl">از نیاز شما<br />تا <span className="text-[#98783f]">تحویل کالا.</span></h2></div>
           <p className="max-w-lg text-sm leading-8 text-[#686963]">در هر مرحله می‌دانید چه اتفاقی در حال انجام است؛ یک مسیر شفاف از تعریف نیاز تا رسیدن کالا به مقصد.</p>
         </div>
         <div className="grid border-y border-black/10 md:grid-cols-5">
