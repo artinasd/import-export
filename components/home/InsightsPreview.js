@@ -23,7 +23,7 @@ export default function InsightsPreview() {
             <article key={title} className={`group py-8 md:px-7 md:py-10 ${index < 2 ? "md:border-l md:border-black/10" : ""}`}>
               <div className="flex items-center justify-between text-xs text-black/40">
                 <span>{category}</span>
-                <span>۰{index + ۱}</span>
+                <span>{String(index + 1).padStart(2, "0")}</span>
               </div>
               <h3 className="mt-14 text-xl font-black leading-8 transition group-hover:text-[#9b7a43]">{title}</h3>
               <p className="mt-4 text-sm leading-7 text-[#686963]">{text}</p>
