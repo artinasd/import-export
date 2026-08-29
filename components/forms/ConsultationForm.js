@@ -1,0 +1,10 @@
+"use client";
+
+import { ArrowLeft } from "lucide-react";
+import { useState } from "react";
+
+export default function ConsultationForm() {
+  const [sent, setSent] = useState(false);
+  if (sent) return <div className="flex min-h-[360px] flex-col items-center justify-center text-center"><span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#171816] text-[#c9a66b]">✓</span><h3 className="mt-7 text-2xl font-black">درخواست مشاوره آماده ثبت است.</h3><p className="mt-3 max-w-md text-sm leading-7 text-[#686963]">این نسخه نمایشی است؛ در نسخه نهایی، درخواست برای هماهنگی جلسه ثبت و پیگیری خواهد شد.</p></div>;
+  return <form onSubmit={(event) => { event.preventDefault(); setSent(true); }}><h2 className="font-display text-3xl font-black">موضوع خود را با ما در میان بگذارید.</h2><div className="mt-8 grid gap-5 sm:grid-cols-2"><label><span className="mb-2 block text-xs font-bold">نام و نام خانوادگی</span><input required className="h-12 w-full rounded-xl border border-black/10 bg-white/60 px-4 text-sm outline-none focus:border-[#c9a66b]" /></label><label><span className="mb-2 block text-xs font-bold">شماره تماس</span><input required className="h-12 w-full rounded-xl border border-black/10 bg-white/60 px-4 text-sm outline-none focus:border-[#c9a66b]" /></label></div><label className="mt-5 block"><span className="mb-2 block text-xs font-bold">موضوع مشاوره</span><select className="h-12 w-full rounded-xl border border-black/10 bg-white/60 px-4 text-sm outline-none focus:border-[#c9a66b]"><option>تأمین و منبع‌یابی</option><option>واردات و گمرک</option><option>صادرات</option><option>اعتبارسنجی تأمین‌کننده</option><option>سایر</option></select></label><label className="mt-5 block"><span className="mb-2 block text-xs font-bold">شرح نیاز</span><textarea rows="6" className="w-full resize-none rounded-xl border border-black/10 bg-white/60 p-4 text-sm outline-none focus:border-[#c9a66b]" /></label><button type="submit" className="mt-7 inline-flex items-center gap-3 rounded-full bg-[#171816] px-6 py-4 text-sm font-bold text-white transition hover:bg-[#98783f]">ارسال درخواست<ArrowLeft size={15} /></button></form>;
+}
