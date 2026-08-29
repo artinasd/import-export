@@ -7,7 +7,7 @@ export default function WhyUs() {
     <section id="why-us" className="bg-[#171816] py-24 text-white lg:py-32">
       <div className="container-site">
         <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
-          <div><p className="mb-6 inline-flex rounded-xl border border-[#c9a66b]/30 bg-[#c9a66b]/[0.14] px-5 py-2.5 text-lg font-extrabold leading-none text-[#c9a66b]">چرا شرکت</p><h2 className="font-display text-balance text-4xl font-black leading-[1.15] tracking-tight sm:text-5xl lg:text-7xl">در تجارت فقط<br /><span className="text-[#c9a66b]">قیمت مهم نیست.</span></h2></div>
+          <div><p className="mb-5 inline-flex w-fit items-center text-base font-extrabold leading-6" style={{ backgroundColor: "rgba(201, 166, 107, 0.14)", border: "1px solid rgba(201, 166, 107, 0.3)", borderRadius: "8px", color: "#c9a66b", padding: "4px 12px" }}>چرا شرکت</p><h2 className="font-display text-balance text-4xl font-black leading-[1.15] tracking-tight sm:text-5xl lg:text-7xl">در تجارت فقط<br /><span className="text-[#c9a66b]">قیمت مهم نیست.</span></h2></div>
           <div><p className="max-w-2xl text-base leading-9 text-white/55">تأمین موفق یعنی تصمیم‌های درست در هر مرحله؛ از انتخاب تأمین‌کننده تا تحویل کالا. ما این مسیر را یکپارچه مدیریت می‌کنیم تا ریسک کاهش یابد و دید شما شفاف باشد.</p><div className="mt-12 grid border-t border-white/10 sm:grid-cols-2">{benefits.map(([Icon, title]) => <div key={title} className="flex items-center gap-4 border-b border-white/10 py-6 sm:pl-6"><span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-[#c9a66b]"><Icon size={17} /></span><span className="text-sm font-bold">{title}</span></div>)}</div></div>
         </div>
       </div>
